@@ -26,8 +26,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        headlineTextView = (TextView) findViewById(R.id.headline);
-        articleTextView = (TextView) findViewById(R.id.article);
+        headlineTextView = findViewById(R.id.headline);
+        articleTextView = findViewById(R.id.article);
 
         new GetDataFromWeb().execute();
     }
