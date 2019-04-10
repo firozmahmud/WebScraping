@@ -43,9 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 Document doc = Jsoup.connect("https://www.tutorialspoint.com/kotlin").get();
                 title = doc.title();
                 Elements body = doc.select("p");
-
-                desc = body.get(0).text();
-
+                
                 builder.append(body.get(0).text()).append("\n\n")
                         .append(body.get(1).text()).append("\n\n")
                         .append(body.get(2).text()).append("\n\n\n");
